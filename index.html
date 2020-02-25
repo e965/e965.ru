@@ -27,38 +27,42 @@
 	<main class="main">
 		<div class="main__top">
 			<p class="main__big">Привет! Меня зовут Дима</p>
-			<p>И я делаю тут в Интернете всякие разные штуки.</p>
-			<p>Если хочешь со мной связаться, можешь написать мне на <a href="mailto:dmitry@cojam.ru">dmitry@cojam.ru</a> или в <a href="https://tlg.name/maltitol">@maltitol</a>.</p>
 
-			<p class="main__select-box">
-				<label for="selecr">Кстати, возможно, ты знаешь меня как</label>
+			<p data-margin="top">И я делаю тут в Интернете всякие разные штуки.</p>
+
+			<p class="main__select-box" data-margin="top">
+				<span>Например, я</span>
 				<select id="select" class="main__select" value="dots">
 					<option hidden value="dots">...</option>
 				</select>
-				<span>?</span>
+				<span>.</span>
 			</p>
-
-			<noscript>
-				<p>Кстати, сидеть без включенного в браузере JS, наверно, круто и очень по-хацкерски, но имей совесть, друже :)</p>
-			</noscript>
 		</div>
 
-		<div class="main__options-box">
-			<div class="main__option" data-title="веб-разработчика" data-id="webdev">
+		<div class="main__options-box" data-margin="top">
+			<div class="main__option" data-title="пишу код" data-id="code">
 
 			</div>
 
-			<div class="main__option" data-title="соавтора Cojam" data-id="cojam">
+			<div class="main__option" data-title="сооснователь Cojam" data-id="cojam">
 
 			</div>
 
-			<div class="main__option" data-title="создателя NYAN.STREAM" data-id="nyanstream">
+			<div class="main__option" data-title="сделал NYAN.STREAM" data-id="nyanstream">
 
 			</div>
 
-			<div class="main__option" data-title="организатора TWG" data-id="twg">
+			<div class="main__option" data-title="организатор TWG" data-id="twg">
 
 			</div>
+		</div>
+
+		<div data-margin="top">
+			<p>Если хочешь со мной связаться, можешь написать мне на <a href="mailto:dmitry@cojam.ru">dmitry@cojam.ru</a> или в Telegram <a href="https://tlg.name/maltitol">@maltitol</a>.</p>
+
+			<noscript>
+				<p data-margin="top">Кстати, сидеть без включенного в браузере JS, наверно, круто и очень по-хацкерски, но имей совесть, друже :)</p>
+			</noscript>
 		</div>
 	</main>
 

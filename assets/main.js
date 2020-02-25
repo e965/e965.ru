@@ -16,15 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
 	let mainOptionsBox = qs({ f: main, s: '.main__options-box' })
 	let mainOptions = qs({ f: mainOptionsBox, s: '.main__option', a: true })
 
-	mainSelect.addEventListener('input', e => {
+	let showOption = option => {
 		let currentSelected = qs({ f: mainOptionsBox, s: '[data-current]' })
-
 		if (currentSelected) {
 			delete currentSelected.dataset.current
 		}
 
-		qs({ f: mainOptionsBox, s: `[data-id="${e.target.value}"]` }).dataset.current = ''
-	})
+		qs({ f: mainOptionsBox, s: `[data-id="${option}"]` }).dataset.current = ''
+	}
+
+	mainSelect.addEventListener('input', e => showOption(e.target.value))
 
 	mainOptions.forEach(option => {
 		let selectOption = ce('option')

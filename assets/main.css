@@ -1,5 +1,6 @@
 * {
 	box-sizing: border-box;
+	margin: 0; padding: 0;
 }
 
 body {
@@ -11,16 +12,34 @@ input, select, button {
 	font: inherit;
 }
 
-.main {
-	max-width: 900px;
+[data-margin='top'] {
+	margin-top: 10px;
+}
+
+.header, .main, .footer {
+	max-width: 800px;
 	margin: 0 auto;
 	padding: 10px;
 
 	font-size: 1.2rem;
+	line-height: 1.6;
 }
 
 .main .main__big {
 	font-size: 1.5em;
+}
+
+.main .main__options-box {
+	min-height: 1px;
+
+	background-color: #000;
+	color: #fff;
+
+	line-height: 2;
+}
+
+.main .main__options-box .main__option {
+	padding: 10px;
 }
 
 .main .main__options-box .main__option:not([data-current]) {
