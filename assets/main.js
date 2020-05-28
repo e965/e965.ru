@@ -4,9 +4,6 @@
 // f - from, s - selector, a - all
 const qs = ({ f = document, s, a = false }) => f[`querySelector${ a ? 'All' : '' }`](s)
 
-// синтаксический сахар для document.createElement()
-const ce = nodeName => document.createElement(nodeName)
-
 document.addEventListener('DOMContentLoaded', () => {
 	const contentBox = qs({ s: '.content' })
 
