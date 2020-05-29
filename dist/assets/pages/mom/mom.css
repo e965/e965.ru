@@ -1,0 +1,29 @@
+body {
+    background-color: #fafafa;
+    padding: 0 20px;
+}
+
+.btn {
+    font: inherit;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #000;
+    transition: 0.3s ease-in-out;
+}
+
+.btn--mini {
+    padding: 5px 15px;
+}
+
+.btn:hover {
+    border-color: #b4b4b4;
+}
+
+.btn__share {
+    margin-top: 20px;
+}
+
+.tnx {
+    cursor: default;
+}

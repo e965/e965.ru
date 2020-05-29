@@ -1,0 +1,29 @@
+{
+    "name": "e965.ru",
+    "description": "e965.ru source code",
+    "private": true,
+    "version": "1.0.0",
+    "author": "Dmitry <dmitry@cojam.ru> (https://e965.ru)",
+    "repository": "github:e965/e965.ru",
+    "license": "MIT",
+    "scripts": {
+        "prettier": "prettier --write **/*.{html,json,js,css}",
+        "lint-staged": "lint-staged"
+    },
+    "lint-staged": {
+        "*.{html,json,js,css}": [
+            "prettier --write"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run lint-staged"
+        }
+    },
+    "devDependencies": {
+        "husky": "^4.2.5",
+        "lint-staged": "^10.2.7",
+        "prettier": "^2.0.5"
+    },
+    "dependencies": {}
+}
