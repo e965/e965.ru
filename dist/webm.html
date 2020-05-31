@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>2ch endless webm player</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link id="favicon" rel="shortcut icon" href="https://favicon.yandex.net/favicon/2ch.hk" />
+
+        <link rel="stylesheet" href="./assets/pages/webm/webm.css" />
+    </head>
+    <body>
+        <div class="choose">
+            <form>
+                <fieldset>
+                    <legend>Введите данные</legend>
+                    <p>
+                        <label for="thread">Номер треда (без <q>.html</q>):</label>
+                        <input name="thread" placeholder="141336058" required="" type="number" />
+                    </p>
+                    <p>
+                        <label for="board">Доска (если не /b, без <q>/</q>):</label> <input name="board" placeholder="gd" type="text" />
+                    </p>
+                    <p style="font-size: 0.7em; color: #8f8f8f;">Закрытые от РКН доски парситься не будут.</p>
+                    <p>
+                        <label for="domain">Домен (если не 2ch.hk, без <q>https://</q>):</label>
+                        <input name="domain" placeholder="2-ch.ru" type="text" />
+                    </p>
+                    <input type="submit" value="Запустить!" />
+                </fieldset>
+            </form>
+
+            <p class="bookm">
+                <a
+                    href="javascript:var loc=window.location.pathname.split('/'),thread_e=loc[3].split('.'),url='https://e965.ru/webm.html?';var board=loc[1],thread=thread_e[0];if(board==='b'){window.open(url+'thread='+thread)}else{window.open(url+'board='+board+'&thread='+thread)}"
+                    onclick="return false;"
+                    >Webm-плеер</a
+                >
+                (перетащи её мышкой на панель закладок браузера, и сможешь открывать плеер прямо с любого webm-треда).
+            </p>
+        </div>
+
+        <video autoplay controls type="video/webm">
+            <p>Ваш браузер не поддерживает HTML5.</p>
+        </video>
+
+        <div class="ctrls">
+            <button class="load" title="Перезагрузка списка webm">reload</button>
+            <button class="next" title="Следующая webm">next</button>
+        </div>
+
+        <script src="https://unpkg.com/kamina-js@1.3.2/dist/kamina.min.js" defer></script>
+        <script src="./assets/pages/webm/webm.js" defer></script>
+    </body>
+</html>
