@@ -2,111 +2,48 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    outline: 0;
 }
 
 html,
 body,
-video {
+.video {
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
-    font-size: 0;
 }
 
 body {
-    background-color: #000;
-    font-family: sans-serif;
-}
-
-body.no-choose {
-    background-color: #fff;
-}
-
-body.no-choose > *:not(.choose) {
-    display: none;
-}
-
-body.no-choose .choose {
-    display: block;
-}
-
-script {
-    display: none;
-    visibility: hidden;
-    width: 0;
-    height: 0;
-    font-size: 0;
+    overflow: hidden;
 }
 
 .choose {
-    display: none;
-    font-size: 16px;
-    padding: 5px;
-    margin: 5px;
+    padding: 50px 10px 0;
+    text-align: center;
 }
 
-.choose fieldset {
-    padding: 5px 10px;
+.choose_form .form__input {
+    padding: 2.5px 5px;
 }
 
-.choose fieldset legend {
-    padding: 0 3px;
+.choose_form .form__note {
+    font-size: 0.7rem;
+    color: #8f8f8f;
+    margin-top: 5px;
 }
 
-.choose label {
-    display: block;
-    padding: 5px 0;
-}
-
-.choose label input {
-    width: 150px;
-    padding: 2px 2px;
-}
-
-input[type='text'],
-input[type='number'] {
-    padding: 5px;
-}
-
-input[type='submit'] {
-    padding: 3px;
-    margin: 5px 0;
-}
-
-.choose .bookm {
+.choose_form .form__submit-btn {
+    padding: 2.5px 5px;
     margin-top: 10px;
 }
 
-.choose .bookm a {
+.choose_bookmark {
+    margin-top: 30px;
+}
+
+.choose_bookmark a {
     font-size: 0;
 }
 
-.choose .bookm a:before {
-    font-size: 16px;
-    content: '[Закладка]';
-}
-
-video {
-    display: block;
-    z-index: 1;
-}
-
-.ctrls {
-    position: absolute;
-    top: 5px;
-    left: 3px;
-    z-index: 2;
-}
-
-.ctrls button {
-    padding: 2px;
-    margin: 0 2px;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-    opacity: 0.2;
-}
-
-.ctrls button:hover {
-    opacity: 0.5;
+.choose_bookmark a:before {
+    font-size: 1rem;
+    content: '[' attr(title) ']';
 }
