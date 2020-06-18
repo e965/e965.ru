@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /
+Disallow:
 
 Host: e965.ru
