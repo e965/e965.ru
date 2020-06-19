@@ -27,3 +27,5 @@ Header set Content-Security-Policy "default-src 'self'; \
  media-src 'self'; \
  script-src 'self' 'unsafe-inline'"
 </IfModule>
+
+Redirect 301 /info.txt https://www.youtube.com/watch?v=dQw4w9WgXcQ
