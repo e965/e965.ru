@@ -9,7 +9,8 @@
     "scripts": {
         "prettier": "prettier --write **/*.{html,json,js,css}",
         "lint-staged": "lint-staged",
-        "prepare": "is-ci || husky install"
+        "prepare": "is-ci || husky install",
+        "deploy": "gh-pages -d dist"
     },
     "lint-staged": {
         "*.{html,json,js,css}": [
@@ -22,6 +23,7 @@
         }
     },
     "devDependencies": {
+        "gh-pages": "3.2.3",
         "husky": "7.0.1",
         "is-ci": "3.0.0",
         "lint-staged": "11.1.0",
