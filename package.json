@@ -8,7 +8,8 @@
     "license": "MIT",
     "scripts": {
         "prettier": "prettier --write **/*.{html,json,js,css}",
-        "lint-staged": "lint-staged"
+        "lint-staged": "lint-staged",
+        "prepare": "is-ci || husky install"
     },
     "lint-staged": {
         "*.{html,json,js,css}": [
@@ -21,9 +22,9 @@
         }
     },
     "devDependencies": {
-        "husky": "^4.2.5",
-        "lint-staged": "^10.2.7",
-        "prettier": "^2.0.5"
-    },
-    "dependencies": {}
+        "husky": "7.0.1",
+        "is-ci": "3.0.0",
+        "lint-staged": "11.1.0",
+        "prettier": "2.3.2"
+    }
 }
