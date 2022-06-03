@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.target.hidden = true;
         s('.tnx').hidden = false;
 
-        if (navigator.share && navigator.canShare()) {
+        if (navigator.share) {
             s('.btn__share').hidden = false;
             s('.btn__share').onclick = () => {
                 navigator.share({
