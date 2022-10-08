@@ -5,12 +5,17 @@ on: [push]
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: https://e965.ru
+
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+        uses: JamesIves/github-pages-deploy-action@v4.4.0
         with:
           branch: gh-pages
           folder: dist
